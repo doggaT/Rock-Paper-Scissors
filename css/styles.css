@@ -1,0 +1,93 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-ff: 'Nova Mono', monospace;
+	--secondary-ff: 'Syne Mono', monospace;
+}
+
+html,
+body {
+	background-color: rgb(58, 58, 58);
+	margin: 0;
+	padding: 0;
+	color: rgb(202, 219, 235);
+	font-family: var(--primary-ff);
+	cursor: default;
+}
+
+header {
+	text-align: center;
+	padding: 4rem;
+	font-size: 5em;
+}
+
+#game-choice {
+	text-align: center;
+	padding: 3rem 0;
+}
+
+.btn--random-signals,
+.btn--choose-signals {
+	font-family: var(--secondary-ff);
+	font-size: 1.5em;
+	padding: 1.5rem;
+	margin: 2rem;
+	border-radius: 0.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: rgb(47, 109, 109);
+	color: rgb(184, 243, 223);
+	transition: background-color 0.2s;
+}
+
+.btn--random-signals:hover,
+.btn--choose-signals:hover {
+	background-color: rgb(33, 88, 88);
+}
+
+.player-panel {
+	display: flex;
+	justify-content: center;
+	padding-top: 2rem;
+}
+
+#random-game {
+	text-align: center;
+	padding: 2rem 0;
+}
+
+.btn--play {
+	margin: 0 auto;
+	font-family: var(--secondary-ff);
+	font-size: 1.5em;
+	padding: 2rem;
+	border-radius: 50%;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-color: rgb(9, 170, 170);
+	color: rgb(192, 218, 209);
+	transition: background-color 0.2s;
+}
+
+.btn--play:hover {
+	background-color: rgb(3, 133, 133);
+}
+
+.player {
+	padding: 0 2rem;
+	margin: 0 2rem;
+}
+.player-choice h4 {
+	text-align: center;
+	font-size: 2.5rem;
+	display: none;
+}
+
+#result-text {
+	font-size: 2rem;
+	padding-top: 2rem;
+}
