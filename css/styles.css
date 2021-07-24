@@ -23,29 +23,19 @@ header {
 	font-size: 5em;
 }
 
-#game-choice {
+.game-panel {
 	text-align: center;
-	padding: 3rem 0;
+	padding-bottom: 3rem;
 }
 
-.btn--random-signals,
-.btn--choose-signals {
-	font-family: var(--secondary-ff);
-	font-size: 1.5em;
-	padding: 1.5rem;
-	margin: 2rem;
-	border-radius: 0.1rem;
-	border: none;
-	outline: none;
+.game-panel__player-choices {
+	font-size: 2rem;
+	padding-bottom: 2rem;
+}
+
+.game-panel__player-choices span {
+	margin: 0 1.5rem;
 	cursor: pointer;
-	background-color: rgb(47, 109, 109);
-	color: rgb(184, 243, 223);
-	transition: background-color 0.2s;
-}
-
-.btn--random-signals:hover,
-.btn--choose-signals:hover {
-	background-color: rgb(33, 88, 88);
 }
 
 .player-panel {
@@ -54,40 +44,86 @@ header {
 	padding-top: 2rem;
 }
 
+h2 {
+	letter-spacing: 0.1em;
+}
+
 #random-game {
 	text-align: center;
 	padding: 2rem 0;
 }
 
-.btn--play {
-	margin: 0 auto;
-	font-family: var(--secondary-ff);
-	font-size: 1.5em;
-	padding: 2rem;
-	border-radius: 50%;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	background-color: rgb(9, 170, 170);
-	color: rgb(192, 218, 209);
-	transition: background-color 0.2s;
-}
-
-.btn--play:hover {
-	background-color: rgb(3, 133, 133);
-}
-
-.player {
+.player,
+.cpu,
+.turn {
 	padding: 0 2rem;
 	margin: 0 2rem;
 }
-.player-choice h4 {
+.player-choice h4,
+.cpu-choice h4,
+.turn-info p {
 	text-align: center;
 	font-size: 2.5rem;
-	display: none;
+}
+
+.turn-info p {
+	margin: 4.3rem 0;
+	font-size: 1.6em;
 }
 
 #result-text {
 	font-size: 2rem;
 	padding-top: 2rem;
+	display: none;
+}
+
+.game-info-modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	background-color: rgb(209, 207, 207);
+	padding: 6rem;
+	border-radius: 5px;
+	box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+	z-index: 10;
+	text-align: center;
+}
+
+.game-info-modal p {
+	font-size: 2em;
+	color: black;
+}
+
+.game-info-modal button {
+	cursor: pointer;
+	outline: none;
+	font-size: 1.2rem;
+	font-family: var(--secondary-ff);
+	border: none;
+	border-radius: 0.2rem;
+	background-color: rgb(108, 180, 248);
+	padding: 1rem;
+	margin-top: 2rem;
+	transition: background-color 0.2s;
+}
+
+.game-info-modal button:hover {
+	background-color: rgb(131, 189, 243);
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(3px);
+	z-index: 5;
+}
+
+.hidden {
+	display: none;
 }
